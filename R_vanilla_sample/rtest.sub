@@ -1,0 +1,22 @@
+# Unix submit description file
+# hola.sub -- hello world in cpp
+
+# Core
+universe                = vanilla
+executable              = /usr/bin/Rscript
+arguments               = rtest.R
+## Files and transfer behaviour
+should_transfer_files   = Yes
+transfer_input_files    = rtest.R
+# transfer_output_files   = result.txt
+when_to_transfer_output = ON_EXIT
+# No need to transfer Rscript, it should be available.
+transfer_executable     = FALSE
+### logging and cout results
+log                     = rtest.log
+error                   = errors.txt
+output                  = result.txt
+### Notify
+notify_user             = p.hernandezcerdan@massey.ac.nz
+notification            = Error
+queue

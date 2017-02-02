@@ -1,0 +1,22 @@
+# Unix submit description file
+# hola.sub -- hello world in cpp
+
+# Simple:
+# universe                = vanilla
+# executable              = hola.out
+# log                     = hola.log
+# output                  = outfile.txt
+# error                   = errors.txt
+# should_transfer_files   = Yes
+# when_to_transfer_output = ON_EXIT
+# queue
+
+# Multiple
+universe                = vanilla
+executable              = hola.out
+log                     = hola.log.$(Process)
+output                  = outfile.txt.$(Process)
+error                   = errors.txt
+should_transfer_files   = Yes
+when_to_transfer_output = ON_EXIT
+queue 12
